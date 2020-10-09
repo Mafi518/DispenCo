@@ -33,7 +33,8 @@ function scss() {
     return src('src/scss/style.scss')
         .pipe(sass())
         .pipe(autoprefixer({
-            cascade: false
+            cascade: false,
+            grid: true
         }))
         .pipe(csso())
         .pipe(webpcss())
